@@ -15,10 +15,5 @@
       </p>
       <%= render 'index', books: @books, book_detail: @book_detail %>
     </div>
-    <div class="card-body">
-      <% @books.each do |book| %>
-        <%= link_to book.title, tag_search_path(book.id), class: 'd-block text-body mb-2' %>
-      <% end %>
-    </div>
   </div>
 </div>

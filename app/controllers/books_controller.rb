@@ -22,7 +22,7 @@ class BooksController < ApplicationController
       @books = Book.latest
     elsif params[:old]
       @books = Book.old
-     else
+    else
       @books = Book.all
     end
     @book = Book.new
@@ -64,9 +64,9 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
-  def tag_search
-    @books_tag=Book.all
-    @tag=Book.find_by(params[:tag])
+  def search_book
+     @book = Book.new
+     @books = Book.search(params[:keyword])
   end
 
   private

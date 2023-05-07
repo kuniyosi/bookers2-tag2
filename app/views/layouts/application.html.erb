@@ -14,7 +14,7 @@
         <p id="notice"><%= notice %></p>
         <div class = "d-flex justify-content-center mb-4">
           <%= render 'layouts/search' %>
-          <%= render 'layouts/tag_search' %>
+          <%= render 'layouts/tag_search', book: @book %>
         </div>
         <%= yield %>
       </main>
